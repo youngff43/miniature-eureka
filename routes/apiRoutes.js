@@ -31,19 +31,25 @@ class saveNote {
     addNote(note) {
         const { title, text } = note;
         if (!title || !text) {
-            throw new Error('You must fill out either the title or the text area');
+            throw new Error('You must fill out either the title or the text area.');
         }
         const newNote = { title, text, id: uuidv4() };
 
-        return this.retrieveAnyNotes()
+        return this.getNotes()
         .then(notes => [...notes, newNote])
         .then(updatedNotes => this.write(updatedNotes))
         .then(() => newNote);
     }
+
+    deleteNote(id) {
+        return this.getNotes()
+        .then(notes => notes.filter(note => note.id !== id))
+        then(filteredNotes => this.write(filteredNotes));
+    }
 }
 
 //GET
-router.get("./notes", function (req, res) {
+router.get("/notes", function (req, res) {
     saveNote
     .getNotes()
     .then(notes => res.json(notes))
@@ -51,7 +57,7 @@ router.get("./notes", function (req, res) {
 });
 
 //POST
-router.post("./notes", (req, res) => {
+router.post("/notes", (req, res) => {
     saveNote
     .addNote(req.body)
     .then((note) => res.json(note))
