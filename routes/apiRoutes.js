@@ -1,6 +1,6 @@
 // requirements 
 const router = require("express").Router();
-const saveNote= require('../db/noteFunctions');
+const saveNote= require('../db/noteFunctions.js');
 
 //GET the notes 
 router.get('/notes', function (req, res) {
