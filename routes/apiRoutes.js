@@ -1,11 +1,11 @@
 // requirements 
 const router = require("express").Router();
-const saveNote= require('../public/assets/js/noteFunctions');
+const saveNote= require('../db/noteFunctions');
 
 //GET the notes 
 router.get('/notes', function (req, res) {
     saveNote
-        .retrieveNotes
+        .retrieveNotes()
         .then(notes => res.json(notes))
         .catch(err => res.status(500).json(err));
 });
