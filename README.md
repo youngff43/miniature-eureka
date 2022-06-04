@@ -4,7 +4,8 @@
 A application deployed on heroku that allows the user to be able to write, save, and delete notes. Existing notes persist even when the user leaves the application. 
 
 ## Screenshots 
-<iframe src="https://giphy.com/embed/oP4xchNwRRJur5ztLp" width="480" height="224" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/oP4xchNwRRJur5ztLp">via GIPHY</a></p>
+https://user-images.githubusercontent.com/99932948/171984001-475ec208-9b95-447d-ae49-456008781491.mov
+
 ## Installation Guidelines
 The user can choose to clone the repository to your local development environment and then navigate to the main directory folder using the command prompt.
 
