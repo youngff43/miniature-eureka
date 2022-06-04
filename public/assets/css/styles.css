@@ -27,12 +27,12 @@ body {
 .note-textarea {
   resize: none;
   height: calc(100% - 63px);
-  padding-top: 15px;
+  padding-top: 5px;
 }
 
 .note-title {
-  height: 50px;
-  margin-top: 13px;
+  height: 26px;
+  margin-top: 5px;
   font-size: 3rem;
 }
 
