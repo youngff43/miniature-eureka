@@ -36,14 +36,14 @@ class Save {
     
         return this.retrieveNotes()
         .then(notes => [...notes, newNote])
-        .then(updatedNotes => this.writeNote(updatedNotes))
+        .then(updatedNotes => this.write(updatedNotes))
         .then(() => newNote);
 }
 
     deleteNote(id) {
         return this.retrieveNotes()
         .then(notes => notes.filter(note => note.id !== id))
-        .then(filteredNotes => this.writeNote(filteredNotes));
+        .then(filteredNotes => this.write(filteredNotes));
     }
 }
 
